@@ -12,14 +12,14 @@ router.get('/', function (req, res, next) {
 router.get('/home', function (req, res, next) {
     res.render('index', { title: 'Home' });
 });
-router.get('/document', function (req, res, next) {
-    res.render('index', { title: 'Documents' });
+router.get('/about', function (req, res, next) {
+    res.render('index', { title: 'About' });
 });
-router.get('/notification', function (req, res, next) {
-    res.render('index', { title: 'Notification' });
+router.get('/projects', function (req, res, next) {
+    res.render('index', { title: 'Projects' });
 });
-router.get('/profile', function (req, res, next) {
-    res.render('index', { title: 'User Profile' });
+router.get('/services', function (req, res, next) {
+    res.render('index', { title: 'Services' });
 });
 router.get('/contact', function (req, res, next) {
     res.render('index', { title: 'Contact' });

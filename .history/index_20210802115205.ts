@@ -7,7 +7,7 @@
 import createError from 'http-errors';
 import app from './app';
 import debug from 'debug';
-debug('i-wallet:server');
+debug('week-3d:server');
 import http from 'http';
 
 /**

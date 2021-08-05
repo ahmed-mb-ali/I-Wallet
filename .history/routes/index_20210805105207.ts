@@ -3,9 +3,9 @@ const router = express.Router();
 export default router;
 
 /* GET home page. */
-router.get('/', function(req,res,next)
+router.get('/', function(req, res, next) 
 {
-    res.render('index', {title: 'Home'});
+  res.render('index', { title: 'Home' });
 });
 
 /* GET home page. */
