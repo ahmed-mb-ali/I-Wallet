@@ -29,12 +29,12 @@ router.get('/notification', function(req, res, next)
 /* GET profile page. */
 router.get('/profile', function(req, res, next) 
 {
-  res.render('index', { title: 'User Profile', page: 'userprofile' });
+  res.render('index', { title: 'User Profile', page: 'user profile' });
 });
 
 /* GET contact page. */
 router.get('/contact', function(req, res, next) 
 {
-  res.render('index', { title: 'Contact Us', page: 'contact' });
+  res.render('index', { title: 'Contact', page: 'contact' });
 });
 //module.exports = router;

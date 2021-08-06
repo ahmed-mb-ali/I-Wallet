@@ -12,19 +12,14 @@
 </head>
 <body>
   <!-- Navigation Section -->
-  <header>
-    <%- include('./components/header.ejs') %>
-  </header>
-
   
-  <!-- Main Section -->
-  <main>
-    <%- include('./content/' + page + '.ejs') %>
-  </main>
   
-
   <!-- Bottom Nav -->
-  <%- include('./components/footer.ejs') %>
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+    <div class="container-fluid">
+      <h4>&copy; Copyright 2021.</h4>
+    </div>
+  </nav>
     
   <!-- JavaScript Section -->
   <script src="/jquery/dist/jquery.min.js"></script>
