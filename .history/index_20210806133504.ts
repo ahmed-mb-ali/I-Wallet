@@ -5,7 +5,7 @@
  */
 
 import createError from 'http-errors';
-import app from './Server/Config/app';
+import app from './Config/app';
 import debug from 'debug';
 debug('i-wallet:server');
 import http from 'http';
