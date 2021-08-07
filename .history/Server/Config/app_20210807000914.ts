@@ -54,9 +54,7 @@ app.use(express.static(path.join(__dirname, "../../node_modules")));
 
 //add support for cors
 app.use(cors());
-app.use(session({
-  secret:  
-}));
+
 
 app.use('/', indexRouter);
 

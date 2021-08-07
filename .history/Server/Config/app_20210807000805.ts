@@ -4,7 +4,6 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
-import cors from 'cors';
 
 //modules for authentication
 import session from 'express-session';
@@ -51,12 +50,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../Client')));
 app.use(express.static(path.join(__dirname, "../../node_modules")));
-
-//add support for cors
-app.use(cors());
-app.use(session({
-  secret:  
-}));
 
 app.use('/', indexRouter);
 
