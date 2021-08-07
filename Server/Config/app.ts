@@ -6,6 +6,10 @@ import logger from 'morgan';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
+//module for authentication messaging and error management
+import flash from 'connect-flash';
+
+
 //modules for authentication
 import session from 'express-session';
 import passport from 'passport';
@@ -15,8 +19,7 @@ import passportLocal from 'passport-local';
 let localStrategy = passportLocal.Strategy; //alias
 import User from '../Models/user';
 
-//module for authentication messaging and error management
-import flash from 'connect-flash';
+
 
 
 //attach router fils

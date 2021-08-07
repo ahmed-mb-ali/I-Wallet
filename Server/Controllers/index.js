@@ -1,4 +1,6 @@
 "use strict";
+
+
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -29,10 +31,20 @@ function DisplayContactPage(req, res, next) {
 exports.DisplayContactPage = DisplayContactPage;
 function DisplayLoginPage(req, res, next) {
     if (!req.user) {
-        return res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage'), displayName: Util_1.UserDisplayName(req) });
+        res.render('index', 
+        { 
+        title: "Login", page: 'login',
+        messages: 'loginMessage', 
+        displayName: Util_1.UserDisplayName(req) 
+    })
     }
-    return res.redirect('/home');
+    else
+    {
+        return res.redirect('/home');
+
+    }
 }
+        
 exports.DisplayLoginPage = DisplayLoginPage;
 function ProcessLoginPage(req, res, next) {
     passport_1.default.authenticate('local', (err, user, info) => {
@@ -41,7 +53,7 @@ function ProcessLoginPage(req, res, next) {
             return next(err);
         }
         if (!user) {
-            req.flash('loginMessage', 'Authentication Error');
+            'loginMessage', 'Authentication Error';
             return res.redirect('/login');
         }
         req.login(user, (err) => {
@@ -56,7 +68,7 @@ function ProcessLoginPage(req, res, next) {
 exports.ProcessLoginPage = ProcessLoginPage;
 function DisplayRegisterPage(req, res, next) {
     if (!req.user) {
-        return res.render('index', { title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: Util_1.UserDisplayName(req) });
+        return res.render('index', { title: 'Register', page: 'register', messages: 'registerMessage', displayName: Util_1.UserDisplayName(req) });
     }
     return res.redirect('/home');
 }
