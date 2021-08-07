@@ -6,22 +6,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 exports.default = router;
-router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
-});
-router.get('/home', function (req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
-});
-router.get('/document', function (req, res, next) {
-    res.render('index', { title: 'Documents', page: 'documents' });
-});
-router.get('/notification', function (req, res, next) {
-    res.render('index', { title: 'Notification', page: 'notification' });
-});
-router.get('/profile', function (req, res, next) {
-    res.render('index', { title: 'User Profile', page: 'userprofile' });
-});
-router.get('/contact', function (req, res, next) {
-    res.render('index', { title: 'Contact Us', page: 'contact' });
-});
+const index_1 = require("../Controllers/index");
+router.get('/', index_1.DisplayHomePage);
+router.get('/home', index_1.DisplayHomePage);
+router.get('/document', index_1.DisplayDocumentPage);
+router.get('/profile', index_1.DisplayUserProfilePage);
+router.get('/notification', index_1.DisplayNotificationPage);
+router.get('/contact', index_1.DisplayContactPage);
+router.get('/login', index_1.DisplayLoginPage);
+router.post('/login', index_1.ProcessLoginPage);
+router.get('/register', index_1.DisplayRegisterPage);
+router.post('/register', index_1.ProcessRegisterPage);
+router.get('/logout', index_1.ProcessLogoutPage);
 //# sourceMappingURL=index.js.map
