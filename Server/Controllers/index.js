@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProcessLogoutPage = exports.ProcessRegisterPage = exports.DisplayRegisterPage = exports.ProcessLoginPage = exports.DisplayLoginPage = exports.DisplayContactPage = exports.DisplayUserProfilePage = exports.DisplayNotificationPage = exports.DisplayDocumentPage = exports.DisplayHomePage = void 0;
+exports.ProcessLogoutPage = exports.ProcessRegisterPage = exports.DisplayRegisterPage = exports.ProcessLoginPage = exports.DisplayLoginPage = exports.DisplayContactPage = exports.DisplayUserProfilePage = exports.DisplayNotificationPage = exports.DisplayDocumentsPage = exports.DisplayHomePage = void 0;
 const passport_1 = __importDefault(require("passport"));
 const user_1 = __importDefault(require("../Models/user"));
 const Util_1 = require("../Util");
@@ -11,10 +11,10 @@ function DisplayHomePage(req, res, next) {
     res.render('index', { title: 'Home', page: 'home', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayHomePage = DisplayHomePage;
-function DisplayDocumentPage(req, res, next) {
-    res.render('index', { title: 'Documents', page: 'document', displayName: Util_1.UserDisplayName(req) });
+function DisplayDocumentsPage(req, res, next) {
+    res.render('index', { title: 'Documents', page: 'documents', displayName: Util_1.UserDisplayName(req) });
 }
-exports.DisplayDocumentPage = DisplayDocumentPage;
+exports.DisplayDocumentsPage = DisplayDocumentsPage;
 function DisplayNotificationPage(req, res, next) {
     res.render('index', { title: 'Notification', page: 'notification', displayName: Util_1.UserDisplayName(req) });
 }
