@@ -1,3 +1,27 @@
-<div class="container">
-    <h1>Welcome to your User Profile page</h1>
-  </div>
+  
+<!-- Welcome Message -->
+
+<main class="container">
+    <br>
+     </div>
+     <div class="row">
+        <div class="col">
+          <p class="display-10"><strong> Welcome to <%= title %> Page </p></strong>
+          <hr class="my-4">
+        </div>
+     </div>
+
+        <form class="form" method="POST">
+                    <p class="label">Name <strong class="req">*</strong></p>
+                    <input class="textbox" type="text" name="name" placeholder="John Doe">
+                    <p class="label">Email <strong class="req">*</strong></p>
+                    <input class="textbox" type="email" name="email" placeholder="john.doe@example.com">
+                    <p class="label">Current Password <strong class="req">*</strong></p>
+                    <input class="textbox" type="password" name="cpassword" placeholder="Password"/>
+                    <p class="label">New Password (Leave blank if not to be changed)</p>
+                    <input class="textbox" type="password" name="npassword" placeholder="Confirm Password"/>
+                <fieldset>
+                    <button input class="btn" type="submit" value="Update Account"/>
+             
+                </fieldset>
+            </form>

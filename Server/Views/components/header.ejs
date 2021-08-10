@@ -1,31 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">I-Wallet</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/home"><i class="fas fa-home fa-lg"></i> Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/document"><i class="fas fa-info fa-lg"></i> Documents</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/notification"><i class="fas fa-cog fa-lg"></i> Notification</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/profile"><i class="fas fa-map fa-lg"></i> User Profile</a>
-          
-           <!-- Clothing List Secure area and Authentication Links -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact"><i class="fas fa-phone fa-lg"></i> Contact</a>
-          </li>
-          
 
-          <% if(displayName) { %>
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/document"> Document </a></li>
+      <li><a class="dropdown-item" href="/notification"> Notification </a></li>
+      <li><a class="dropdown-item" href="/profile"> User Profile </a></li>
+      <li><a class="dropdown-item" href="/contact"> Customer Care </a></li>
+
+    </ul>
+  </li>
+  <li class="nav-item">
+
+    <% if(displayName) { %>
           <li class="nav-item">
             <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt fa-lg"></i> Logout</a>
           </li>
@@ -35,9 +26,7 @@
           </li>
           <% } %>
 
-        </ul>
-      </div>
-    </div>
+  </li>   
   </nav>
 
  
